@@ -15,7 +15,7 @@ Imports DevExpress.ExpressApp.Model.NodeGenerators
 
 Namespace WinExample.Module.Win
     ' For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppModuleBasetopic.aspx.
-    <ToolboxItemFilter("Xaf.Platform.Win")>
+    <ToolboxItemFilter("Xaf.Platform.Win")> _
     Public NotInheritable Partial Class WinExampleWindowsFormsModule
         Inherits ModuleBase
 
