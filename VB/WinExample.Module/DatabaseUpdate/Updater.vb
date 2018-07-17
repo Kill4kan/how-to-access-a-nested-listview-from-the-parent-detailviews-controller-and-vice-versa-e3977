@@ -1,14 +1,15 @@
 ﻿Imports System
-
+Imports System.Linq
 Imports DevExpress.ExpressApp
+Imports DevExpress.Data.Filtering
+Imports DevExpress.Persistent.Base
 Imports DevExpress.ExpressApp.Updating
 Imports DevExpress.Xpo
-Imports DevExpress.Data.Filtering
+Imports DevExpress.ExpressApp.Xpo
 Imports DevExpress.Persistent.BaseImpl
-Imports DevExpress.ExpressApp.Security
-Imports WinExample.Module.BusinessObjects
 
 Namespace WinExample.Module.DatabaseUpdate
+    ' For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppUpdatingModuleUpdatertopic.aspx
     Public Class Updater
         Inherits ModuleUpdater
 
@@ -17,17 +18,20 @@ Namespace WinExample.Module.DatabaseUpdate
         End Sub
         Public Overrides Sub UpdateDatabaseAfterUpdateSchema()
             MyBase.UpdateDatabaseAfterUpdateSchema()
-            Dim master As DomainObject1 = ObjectSpace.FindObject(Of DomainObject1)(New BinaryOperator("Name", "Master"))
-            If master Is Nothing Then
-                master = ObjectSpace.CreateObject(Of DomainObject1)()
-                master.Name = "Master"
-                Dim detail1 As DomainObject2 = ObjectSpace.CreateObject(Of DomainObject2)()
-                detail1.Name = "Detail 1"
-                detail1.DomainObject1 = master
-                Dim detail2 As DomainObject2 = ObjectSpace.CreateObject(Of DomainObject2)()
-                detail2.Name = "Detail 2"
-                detail2.DomainObject1 = master
-            End If
+            'string name = "MyName";
+            'DomainObject1 theObject = ObjectSpace.FindObject<DomainObject1>(CriteriaOperator.Parse("Name=?", name));
+            'if(theObject == null) {
+            '    theObject = ObjectSpace.CreateObject<DomainObject1>();
+            '    theObject.Name = name;
+            '}
+
+            'ObjectSpace.CommitChanges(); //Uncomment this line to persist created object(s).
+        End Sub
+        Public Overrides Sub UpdateDatabaseBeforeUpdateSchema()
+            MyBase.UpdateDatabaseBeforeUpdateSchema()
+            'if(CurrentDBVersion < new Version("1.1.0.0") && CurrentDBVersion > new Version("0.0.0.0")) {
+            '    RenameColumn("DomainObject1Table", "OldColumnName", "NewColumnName");
+            '}
         End Sub
     End Class
 End Namespace

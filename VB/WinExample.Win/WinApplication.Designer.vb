@@ -27,34 +27,22 @@
             Me.module2 = New DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule()
             Me.module3 = New WinExample.Module.WinExampleModule()
             Me.module4 = New WinExample.Module.Win.WinExampleWindowsFormsModule()
-            Me.module5 = New DevExpress.ExpressApp.Validation.ValidationModule()
-            Me.module6 = New DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule()
-            Me.module7 = New DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule()
-            Me.sqlConnection1 = New System.Data.SqlClient.SqlConnection()
-            Me.securityModule1 = New DevExpress.ExpressApp.Security.SecurityModule()
             CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
-            ' 
-            ' module5
-            ' 
-            Me.module5.AllowValidationDetailsAccess = True
-            ' 
-            ' sqlConnection1
-            ' 
-            Me.sqlConnection1.ConnectionString = "Data Source=(local);Initial Catalog=WinExample;Integrated Security=SSPI;Pooling=f" & "alse"
-            Me.sqlConnection1.FireInfoMessageEventOnUserErrors = False
             ' 
             ' WinExampleWindowsFormsApplication
             ' 
             Me.ApplicationName = "WinExample"
-            Me.Connection = Me.sqlConnection1
+            Me.CheckCompatibilityType = DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema
             Me.Modules.Add(Me.module1)
             Me.Modules.Add(Me.module2)
-            Me.Modules.Add(Me.module6)
-            Me.Modules.Add(Me.securityModule1)
             Me.Modules.Add(Me.module3)
             Me.Modules.Add(Me.module4)
-            Me.Modules.Add(Me.module5)
-            Me.Modules.Add(Me.module7)
+            Me.UseOldTemplates = False
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.DatabaseVersionMismatch += new System.EventHandler<DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs>(this.WinExampleWindowsFormsApplication_DatabaseVersionMismatch);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.CustomizeLanguagesList += new System.EventHandler<DevExpress.ExpressApp.CustomizeLanguagesListEventArgs>(this.WinExampleWindowsFormsApplication_CustomizeLanguagesList);
+
             CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
         End Sub
@@ -65,10 +53,5 @@
         Private module2 As DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule
         Private module3 As WinExample.Module.WinExampleModule
         Private module4 As WinExample.Module.Win.WinExampleWindowsFormsModule
-        Private module5 As DevExpress.ExpressApp.Validation.ValidationModule
-        Private module6 As DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule
-        Private module7 As DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule
-        Private sqlConnection1 As System.Data.SqlClient.SqlConnection
-        Private securityModule1 As DevExpress.ExpressApp.Security.SecurityModule
     End Class
 End Namespace

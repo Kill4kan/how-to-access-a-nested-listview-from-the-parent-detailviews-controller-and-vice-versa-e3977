@@ -10,7 +10,7 @@ Imports DevExpress.Persistent.BaseImpl
 Imports DevExpress.Persistent.Validation
 
 Namespace WinExample.Module.BusinessObjects
-    <DefaultClassOptions> _
+    <DefaultClassOptions>
     Public Class DomainObject1
         Inherits BaseObject
 
@@ -26,7 +26,7 @@ Namespace WinExample.Module.BusinessObjects
                 SetPropertyValue("Name", _Name, value)
             End Set
         End Property
-        <Association("DomainObject1-DomainObject2s")> _
+        <Association("DomainObject1-DomainObject2s")>
         Public ReadOnly Property DomainObject2s() As XPCollection(Of DomainObject2)
             Get
                 Return GetCollection(Of DomainObject2)("DomainObject2s")

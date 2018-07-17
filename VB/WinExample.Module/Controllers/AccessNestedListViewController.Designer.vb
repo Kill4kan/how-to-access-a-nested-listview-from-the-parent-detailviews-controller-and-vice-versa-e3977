@@ -28,16 +28,14 @@
             ' 
             ' simpleAction1
             ' 
-            Me.simpleAction1.Caption = "My Simple Action 1"
+            Me.simpleAction1.Caption = Nothing
             Me.simpleAction1.ConfirmationMessage = Nothing
-            Me.simpleAction1.Id = "MySimpleAction1"
-            Me.simpleAction1.ImageName = Nothing
-            Me.simpleAction1.Shortcut = Nothing
-            Me.simpleAction1.Tag = Nothing
-            Me.simpleAction1.TargetObjectsCriteria = Nothing
-            Me.simpleAction1.TargetViewId = Nothing
+            Me.simpleAction1.Id = "f59fe6fd-8ee0-4e7c-b5b5-d6558667366a"
             Me.simpleAction1.ToolTip = Nothing
-            Me.simpleAction1.TypeOfView = Nothing
+            ' 
+            ' AccessNestedListViewController
+            ' 
+            Me.Actions.Add(Me.simpleAction1)
 
         End Sub
 

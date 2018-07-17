@@ -1,3 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<Application Title="WinExample" Logo="ExpressAppLogo" />
-
+<Application Title="WinExample">
+  <Views>
+  </Views>
+</Application>

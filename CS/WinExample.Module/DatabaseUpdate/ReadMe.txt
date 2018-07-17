@@ -8,13 +8,13 @@ update when the application version changes.
 Relevant Documentation
 
 Supply Initial Data
-http://help.devexpress.com/#Xaf/CustomDocument2788
+https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112788.aspx
 
 Distribute the Created Reports with the Application
-http://help.devexpress.com/#Xaf/CustomDocument2786
+https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112786.aspx
 
 How to: Update the Database Structure after the Persistent Class or Property Was Renamed or Removed
-http://help.devexpress.com/#Xaf/CustomDocument3254
+https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113254.aspx
 
 ModuleUpdater Class
-http://help.devexpress.com/#Xaf/clsDevExpressExpressAppUpdatingModuleUpdatertopic
+https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppUpdatingModuleUpdatertopic.aspx

@@ -42,7 +42,7 @@ Namespace WinExample.Module.Controllers
         End Sub
         Public ReadOnly Property CurrentObject() As DomainObject2
             Get
-                Return CType(View.CurrentObject, DomainObject2)
+                Return DirectCast(View.CurrentObject, DomainObject2)
             End Get
         End Property
         Public ReadOnly Property MySimpleAction2() As SimpleAction

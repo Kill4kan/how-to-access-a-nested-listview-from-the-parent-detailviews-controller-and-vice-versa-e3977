@@ -1,4 +1,4 @@
-namespace WinExample.Module.Win {
+﻿namespace WinExample.Module.Win {
     partial class WinExampleWindowsFormsModule {
         /// <summary> 
         /// Required designer variable.
@@ -10,7 +10,7 @@ namespace WinExample.Module.Win {
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+            if(disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -28,7 +28,6 @@ namespace WinExample.Module.Win {
             // 
             this.RequiredModuleTypes.Add(typeof(WinExample.Module.WinExampleModule));
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule));
-
         }
 
         #endregion

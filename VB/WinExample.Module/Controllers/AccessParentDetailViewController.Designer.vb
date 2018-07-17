@@ -28,16 +28,14 @@
             ' 
             ' simpleAction1
             ' 
-            Me.simpleAction1.Caption = "My Simple Action 2"
+            Me.simpleAction1.Caption = Nothing
             Me.simpleAction1.ConfirmationMessage = Nothing
-            Me.simpleAction1.Id = "MySimpleAction2"
-            Me.simpleAction1.ImageName = Nothing
-            Me.simpleAction1.Shortcut = Nothing
-            Me.simpleAction1.Tag = Nothing
-            Me.simpleAction1.TargetObjectsCriteria = Nothing
-            Me.simpleAction1.TargetViewId = Nothing
+            Me.simpleAction1.Id = "276bbc79-194f-4671-aaee-8e047e92ac61"
             Me.simpleAction1.ToolTip = Nothing
-            Me.simpleAction1.TypeOfView = Nothing
+            ' 
+            ' AccessParentDetailViewController
+            ' 
+            Me.Actions.Add(Me.simpleAction1)
 
         End Sub
 

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Configuration;
 using System.Windows.Forms;
 
@@ -16,27 +16,36 @@ namespace WinExample.Win {
         [STAThread]
         static void Main() {
 #if EASYTEST
-			DevExpress.ExpressApp.Win.EasyTest.EasyTestRemotingRegistration.Register();
+            DevExpress.ExpressApp.Win.EasyTest.EasyTestRemotingRegistration.Register();
 #endif
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             EditModelPermission.AlwaysGranted = System.Diagnostics.Debugger.IsAttached;
+            if(Tracing.GetFileLocationFromSettings() == DevExpress.Persistent.Base.FileLocation.CurrentUserApplicationDataFolder) {
+                Tracing.LocalUserAppDataPath = Application.LocalUserAppDataPath;
+            }
+            Tracing.Initialize();
             WinExampleWindowsFormsApplication winApplication = new WinExampleWindowsFormsApplication();
-#if EASYTEST
-			if(ConfigurationManager.ConnectionStrings["EasyTestConnectionString"] != null) {
-				winApplication.ConnectionString = ConfigurationManager.ConnectionStrings["EasyTestConnectionString"].ConnectionString;
-			}
-#endif
-            if (ConfigurationManager.ConnectionStrings["ConnectionString"] != null) {
+            // Refer to the https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112680.aspx help article for more details on how to provide a custom splash form.
+            //winApplication.SplashScreen = new DevExpress.ExpressApp.Win.Utils.DXSplashScreen("YourSplashImage.png");
+            if(ConfigurationManager.ConnectionStrings["ConnectionString"] != null) {
                 winApplication.ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             }
+#if EASYTEST
+            if(ConfigurationManager.ConnectionStrings["EasyTestConnectionString"] != null) {
+                winApplication.ConnectionString = ConfigurationManager.ConnectionStrings["EasyTestConnectionString"].ConnectionString;
+            }
+#endif
+#if DEBUG
+            if(System.Diagnostics.Debugger.IsAttached && winApplication.CheckCompatibilityType == CheckCompatibilityType.DatabaseSchema) {
+                winApplication.DatabaseUpdateMode = DatabaseUpdateMode.UpdateDatabaseAlways;
+            }
+#endif
             try {
-                // Uncomment this line when using the Middle Tier application server:
-                // new DevExpress.ExpressApp.MiddleTier.MiddleTierClientApplicationConfigurator(winApplication);
                 winApplication.Setup();
                 winApplication.Start();
-            } catch (Exception e) {
+            }
+            catch(Exception e) {
                 winApplication.HandleException(e);
             }
         }
