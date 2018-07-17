@@ -8,9 +8,9 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("WinExample.Win")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyConfiguration("")>
-<Assembly: AssemblyCompany("-")>
+<Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("WinExample.Win")>
-<Assembly: AssemblyCopyright("Copyright © - 2007")>
+<Assembly: AssemblyCopyright("Copyright © 2018")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 

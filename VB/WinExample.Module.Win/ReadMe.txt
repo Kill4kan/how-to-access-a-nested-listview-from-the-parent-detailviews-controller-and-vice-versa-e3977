@@ -1,6 +1,6 @@
 ﻿Project Description
 
-The WinExample.Module.Win project implements a Windows Forms Module. Platform-specific application 
+This project implements a WinForms Module. Platform-specific application 
 elements can be implemented here (Controllers, Editors & View Items, etc.). 
 The root project folder contains the WinModule.cs(vb) file with the class that 
 inherits ModuleBase. This class can be designed with the Module Designer that 
@@ -14,16 +14,24 @@ with the Model Editor.
 Relevant Documentation
 
 Application Solution Components
-http://help.devexpress.com/#Xaf/CustomDocument2569
+https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112569.aspx
 
 ModuleBase Class
-http://help.devexpress.com/#Xaf/clsDevExpressExpressAppModuleBasetopic
+https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppModuleBasetopic.aspx
 
 Module Designer
-http://help.devexpress.com/#Xaf/CustomDocument2828
+https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112828.aspx
 
 Application Model
-http://help.devexpress.com/#Xaf/CustomDocument2579
+https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112579.aspx
 
 Model Editor
-http://help.devexpress.com/#Xaf/CustomDocument2582
+https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112582.aspx
+
+
+eXpand Framework - http://www.expandframework.com
+
+This is an open source toolkit built above the eXpressApp Framework extending its capabilities
+and providing 50+ cutting-edge libraries containing tools and reusable modules to target numerous 
+business scenarios. The main idea behind eXpand is to offer as many features as possible to 
+developers/business users through a declarative approach (configuring files rather than writing code).

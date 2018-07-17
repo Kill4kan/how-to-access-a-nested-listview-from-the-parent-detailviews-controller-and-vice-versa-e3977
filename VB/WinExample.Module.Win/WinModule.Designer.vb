@@ -28,7 +28,6 @@
             ' 
             Me.RequiredModuleTypes.Add(GetType(WinExample.Module.WinExampleModule))
             Me.RequiredModuleTypes.Add(GetType(DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule))
-
         End Sub
 
         #End Region

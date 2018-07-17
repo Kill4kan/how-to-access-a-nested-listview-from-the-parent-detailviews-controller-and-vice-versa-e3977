@@ -8,7 +8,7 @@ descendant and as Domain Component interfaces.
 Relevant Documentation
 
 Business Model Design
-http://help.devexpress.com/#Xaf/CustomDocument2600
+https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112600.aspx
 
 Domain Components
-http://help.devexpress.com/#Xaf/CustomDocument3261
+https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113261.aspx

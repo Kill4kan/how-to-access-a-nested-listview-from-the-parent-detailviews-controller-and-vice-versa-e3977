@@ -31,7 +31,7 @@ Namespace WinExample.Module.Controllers
             Dim listPropertyEditor As ListPropertyEditor = DirectCast(sender, ListPropertyEditor)
             Dim listViewFrame As Frame = listPropertyEditor.Frame
             Dim nestedListView As ListView = listPropertyEditor.ListView
-            UpdateMySimpleAction1Caption(CType(nestedListView.CurrentObject, DomainObject2))
+            UpdateMySimpleAction1Caption(DirectCast(nestedListView.CurrentObject, DomainObject2))
             AddHandler nestedListView.CurrentObjectChanged, AddressOf nestedListView_CurrentObjectChanged
             Dim accessParentDetailViewController As AccessParentDetailViewController = listViewFrame.GetController(Of AccessParentDetailViewController)()
             If accessParentDetailViewController IsNot Nothing Then
@@ -39,7 +39,7 @@ Namespace WinExample.Module.Controllers
             End If
         End Sub
         Private Sub nestedListView_CurrentObjectChanged(ByVal sender As Object, ByVal e As EventArgs)
-            UpdateMySimpleAction1Caption(CType(DirectCast(sender, ListView).CurrentObject, DomainObject2))
+            UpdateMySimpleAction1Caption(DirectCast(DirectCast(sender, ListView).CurrentObject, DomainObject2))
         End Sub
         Private Sub UpdateMySimpleAction1Caption(ByVal obj As DomainObject2)
             If obj IsNot Nothing Then
@@ -48,7 +48,7 @@ Namespace WinExample.Module.Controllers
         End Sub
         Public ReadOnly Property CurrentObject() As DomainObject1
             Get
-                Return CType(View.CurrentObject, DomainObject1)
+                Return DirectCast(View.CurrentObject, DomainObject1)
             End Get
         End Property
         Public ReadOnly Property MySimpleAction1() As SimpleAction

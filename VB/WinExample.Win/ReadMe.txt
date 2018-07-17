@@ -1,6 +1,6 @@
 ﻿Project Description
 
-The WinExample.Win project implements a Windows Forms application. The root project folder 
+This project implements a WinForms application. The root project folder 
 contains the WinApplication.cs(vb) file with the class that inherits 
 WinApplication. This class can be designed with the Application Designer that 
 allows you to view and customize application components: referenced modules, 
@@ -13,19 +13,27 @@ the Model Editor.
 Relevant Documentation
 
 Application Solution Components
-http://help.devexpress.com/#Xaf/CustomDocument2569
+https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112569.aspx
 
 WinApplication Class
-http://help.devexpress.com/#Xaf/clsDevExpressExpressWinWinApplicationtopic
+https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppWinWinApplicationtopic.aspx
 
 XafApplication Class
-http://help.devexpress.com/#Xaf/clsDevExpressExpressXafApplicationtopic
+https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppXafApplicationtopic.aspx
 
 Application Designer
-http://help.devexpress.com/#Xaf/CustomDocument2827
+https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112827.aspx
 
 Application Model
-http://help.devexpress.com/#Xaf/CustomDocument2579
+https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112579.aspx
 
 Model Editor
-http://help.devexpress.com/#Xaf/CustomDocument2582
+https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112582.aspx
+
+
+eXpand Framework - http://www.expandframework.com
+
+This is an open source toolkit built above the eXpressApp Framework extending its capabilities
+and providing 50+ cutting-edge libraries containing tools and reusable modules to target numerous 
+business scenarios. The main idea behind eXpand is to offer as many features as possible to 
+developers/business users through a declarative approach (configuring files rather than writing code).

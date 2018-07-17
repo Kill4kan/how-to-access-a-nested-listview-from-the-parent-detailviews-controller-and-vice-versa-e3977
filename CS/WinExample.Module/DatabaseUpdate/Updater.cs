@@ -1,29 +1,35 @@
-using System;
-
+﻿using System;
+using System.Linq;
 using DevExpress.ExpressApp;
+using DevExpress.Data.Filtering;
+using DevExpress.Persistent.Base;
 using DevExpress.ExpressApp.Updating;
 using DevExpress.Xpo;
-using DevExpress.Data.Filtering;
+using DevExpress.ExpressApp.Xpo;
 using DevExpress.Persistent.BaseImpl;
-using DevExpress.ExpressApp.Security;
-using WinExample.Module.BusinessObjects;
 
 namespace WinExample.Module.DatabaseUpdate {
+    // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppUpdatingModuleUpdatertopic.aspx
     public class Updater : ModuleUpdater {
-        public Updater(IObjectSpace objectSpace, Version currentDBVersion) : base(objectSpace, currentDBVersion) { }
+        public Updater(IObjectSpace objectSpace, Version currentDBVersion) :
+            base(objectSpace, currentDBVersion) {
+        }
         public override void UpdateDatabaseAfterUpdateSchema() {
             base.UpdateDatabaseAfterUpdateSchema();
-            DomainObject1 master = ObjectSpace.FindObject<DomainObject1>(new BinaryOperator("Name", "Master"));
-            if (master == null) {
-                master = ObjectSpace.CreateObject<DomainObject1>();
-                master.Name = "Master";
-                DomainObject2 detail1 = ObjectSpace.CreateObject<DomainObject2>();
-                detail1.Name = "Detail 1";
-                detail1.DomainObject1 = master;
-                DomainObject2 detail2 = ObjectSpace.CreateObject<DomainObject2>();
-                detail2.Name = "Detail 2";
-                detail2.DomainObject1 = master;
-            }
+            //string name = "MyName";
+            //DomainObject1 theObject = ObjectSpace.FindObject<DomainObject1>(CriteriaOperator.Parse("Name=?", name));
+            //if(theObject == null) {
+            //    theObject = ObjectSpace.CreateObject<DomainObject1>();
+            //    theObject.Name = name;
+            //}
+
+			//ObjectSpace.CommitChanges(); //Uncomment this line to persist created object(s).
+        }
+        public override void UpdateDatabaseBeforeUpdateSchema() {
+            base.UpdateDatabaseBeforeUpdateSchema();
+            //if(CurrentDBVersion < new Version("1.1.0.0") && CurrentDBVersion > new Version("0.0.0.0")) {
+            //    RenameColumn("DomainObject1Table", "OldColumnName", "NewColumnName");
+            //}
         }
     }
 }

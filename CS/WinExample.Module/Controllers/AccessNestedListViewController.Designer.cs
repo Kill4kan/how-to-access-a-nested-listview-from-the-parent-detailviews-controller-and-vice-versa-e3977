@@ -1,4 +1,4 @@
-namespace WinExample.Module.Controllers {
+﻿namespace WinExample.Module.Controllers {
     partial class AccessNestedListViewController {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,14 @@ namespace WinExample.Module.Controllers {
             // 
             // simpleAction1
             // 
-            this.simpleAction1.Caption = "My Simple Action 1";
+            this.simpleAction1.Caption = null;
             this.simpleAction1.ConfirmationMessage = null;
-            this.simpleAction1.Id = "MySimpleAction1";
-            this.simpleAction1.ImageName = null;
-            this.simpleAction1.Shortcut = null;
-            this.simpleAction1.Tag = null;
-            this.simpleAction1.TargetObjectsCriteria = null;
-            this.simpleAction1.TargetViewId = null;
+            this.simpleAction1.Id = "f59fe6fd-8ee0-4e7c-b5b5-d6558667366a";
             this.simpleAction1.ToolTip = null;
-            this.simpleAction1.TypeOfView = null;
+            // 
+            // AccessNestedListViewController
+            // 
+            this.Actions.Add(this.simpleAction1);
 
         }
 
