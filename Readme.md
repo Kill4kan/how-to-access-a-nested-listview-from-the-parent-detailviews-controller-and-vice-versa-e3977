@@ -1,5 +1,6 @@
 # How to access a nested ListView from the parent DetailView's controller and vice versa
 
+<i>Update: Approaches from this example are now described in the <a href="https://docs.devexpress.com/eXpressAppFramework/113161/task-based-help/views/how-to-access-master-detail-view-and-nested-list-view-environment">How to: Access Master Detail View and Nested List View Environment</a> topic. Refer to it for a more detailed description.</i>
 
 <p>This example is based on the following facts:</p><br />
 <p>1. The nested ListView is shown in the parent DetailView via the ListPropertyEditor. The ListPropertyEditor class has the Frame property that returns the nested frame and the ListView property that returns the nested ListView. To get the ListPropertyEditor, use the DetailView.FindItem or DetailView.GetItems method.</p><br />
